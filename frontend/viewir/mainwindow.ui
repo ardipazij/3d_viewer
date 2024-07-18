@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1300</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>750</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1300</width>
+    <height>750</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowOpacity">
+   <double>4.000000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">MainWindow{
+	background: #024C68;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="glwidget" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>12</y>
+      <width>700</width>
+      <height>700</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>700</width>
+      <height>700</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="open_file">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>40</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	
+	font: 13pt &quot;Apple Braille&quot;;
+     border-radius: 8px;
+     background-color:  #FFAA01	;
+     min-width: 80px;
+ }
+
+QPushButton:pressed {
+     background-color: #A67600;
+ }</string>
+    </property>
+    <property name="text">
+     <string>OPEN FILE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="vertex_count">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>30</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Vertex count : </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="facets_count">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>60</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Facets count :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="path_to_file_text">
+    <property name="geometry">
+     <rect>
+      <x>727</x>
+      <y>10</y>
+      <width>571</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="move_z">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>190</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox{
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+    </property>
+    <property name="minimum">
+     <double>-2.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>2.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.010000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="move_y">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>190</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox{
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+    </property>
+    <property name="decimals">
+     <number>2</number>
+    </property>
+    <property name="minimum">
+     <double>-2.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>2.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.010000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="move_x">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>190</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox{
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+    </property>
+    <property name="minimum">
+     <double>-2.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>2.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.010000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>160</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Move model</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>195</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>837</x>
+      <y>195</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Y</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>917</x>
+      <y>195</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Z</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="speed_coeff">
+    <property name="geometry">
+     <rect>
+      <x>1010</x>
+      <y>190</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox{
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>1000</number>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="rotate_y">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>275</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox{
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+    </property>
+    <property name="decimals">
+     <number>2</number>
+    </property>
+    <property name="minimum">
+     <double>-2.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>2.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.010000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="rotate_x">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>275</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox{
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+    </property>
+    <property name="minimum">
+     <double>-2.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>2.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.010000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>250</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Rotate model</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="rotate_z">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>275</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox{
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+    </property>
+    <property name="minimum">
+     <double>0.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>360.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>837</x>
+      <y>280</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Y</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>280</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>917</x>
+      <y>280</y>
+      <width>16</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Z</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>745</x>
+      <y>110</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+	color: #FFAA01;
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Central projection</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Parallel projection</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QDoubleSpinBox" name="scale">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>110</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox{
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+    </property>
+    <property name="decimals">
+     <number>3</number>
+    </property>
+    <property name="minimum">
+     <double>0.001000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>2.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.010000000000000</double>
+    </property>
+    <property name="value">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>112</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Scale:</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="red_slider">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>385</y>
+      <width>160</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+     border: 1px rgb(25, 25, 25);
+ border-radius: 3px;
+     height: 8px; 
+     background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0          rgba(0, 0, 0, 255), stop:1 rgba(255, 0, 0, 255));
+ }
+
+ QSlider::handle:horizontal {
+     background: rgb(127, 126, 128);
+     border: 1px solid rgb(0, 0, 0);
+     width: 5px;
+     margin: -3px 0;
+     border-radius: 2px;
+ }
+
+
+</string>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="green_slider">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>435</y>
+      <width>160</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+     border: 1px rgb(25, 25, 25);
+ border-radius: 3px;
+     height: 8px; 
+     background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0          rgba(0, 0, 0, 255), stop:1 rgba(0, 255, 0, 255));
+ }
+
+ QSlider::handle:horizontal {
+     background: rgb(127, 126, 128);
+     border: 1px solid rgb(0, 0, 0);
+     width: 5px;
+     margin: -3px 0;
+     border-radius: 2px;
+ }
+</string>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="blue_slider">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>485</y>
+      <width>160</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+     border: 1px rgb(25, 25, 25);
+     height: 8px; 
+ border-radius: 3px;
+     background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0          rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 255, 255));
+ }
+
+ QSlider::handle:horizontal {
+     background: rgb(127, 126, 128);
+     border: 1px solid rgb(0, 0, 0);
+     width: 5px;
+     margin: -3px 0;
+     border-radius: 2px;
+ }
+</string>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>390</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>red</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>440</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>green</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>490</y>
+      <width>58</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>blue</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="choose_view">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>331</y>
+      <width>231</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+	color: #FFAA01;
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Lines</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Points</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Background</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="red_value">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>390</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="green_value">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>440</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="blue_value">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>490</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="point_size_value">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>565</y>
+      <width>160</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+	border: 1px solid #024C68;
+     border-radius: 3px;
+     height: 8px; 
+     background: rgb(255, 255, 255);
+ }
+
+ QSlider::handle:horizontal {
+     background: rgb(127, 126, 128);
+     border: 1px solid rgb(0, 0, 0);
+     width: 5px;
+     margin: -3px 0;
+     border-radius: 2px;
+ }
+
+ QSlider::sub-page:horizontal {
+	background: #FFAA01;
+	border: 1px solid #024C68;
+     border-radius: 3px;
+    /* background: rgba(0, 0, 0, 127);*/
+ }
+</string>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+    <property name="pageStep">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="line_size_value">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>625</y>
+      <width>160</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+	border: 1px solid #024C68;
+     border-radius: 3px;
+     height: 8px; 
+     background: rgb(255, 255, 255);
+ }
+
+ QSlider::handle:horizontal {
+     background: rgb(127, 126, 128);
+     border: 1px solid rgb(0, 0, 0);
+     width: 5px;
+     margin: -3px 0;
+     border-radius: 2px;
+ }
+
+ QSlider::sub-page:horizontal {
+	background: #FFAA01;
+	border: 1px solid #024C68;
+     border-radius: 3px;
+    /* background: rgba(0, 0, 0, 127);*/
+ }
+</string>
+    </property>
+    <property name="maximum">
+     <number>20</number>
+    </property>
+    <property name="pageStep">
+     <number>1</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="point_size">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>570</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="line_size">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>630</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>535</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Point size</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>595</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 13pt &quot;Apple Braille&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Line size</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>545</y>
+      <width>73</width>
+      <height>39</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QRadioButton" name="point_circle">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+color: white;
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+       </property>
+       <property name="text">
+        <string>Circle</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="point_cube">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+color: white;
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+       </property>
+       <property name="text">
+        <string>Cube</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QComboBox" name="point_is_exist">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>555</y>
+      <width>111</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+	color: #FFAA01;
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>exist</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>non_exist</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="line_is_exist">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>620</y>
+      <width>111</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox{
+color: rgb(255, 165, 0);
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>exist</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>non_exist</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>615</y>
+      <width>73</width>
+      <height>39</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QRadioButton" name="solid_button">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+color: white;
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+       </property>
+       <property name="text">
+        <string>Solid</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="dashed_button">
+       <property name="styleSheet">
+        <string notr="true">QRadioButton{
+color: white;
+	font: 13pt &quot;Apple Braille&quot;;
+}</string>
+       </property>
+       <property name="text">
+        <string>Dashed</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>682</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	
+	font: 13pt &quot;Apple Braille&quot;;
+     border-radius: 8px;
+     background-color:  #FFAA01	;
+     min-width: 80px;
+ }
+
+QPushButton:pressed {
+     background-color: #A67600;
+ }</string>
+    </property>
+    <property name="text">
+     <string>GIF</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>682</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	
+	font: 13pt &quot;Apple Braille&quot;;
+     border-radius: 8px;
+     background-color:  #FFAA01	;
+     min-width: 80px;
+ }
+
+QPushButton:pressed {
+     background-color: #A67600;
+ }</string>
+    </property>
+    <property name="text">
+     <string>IMAGE</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1300</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>glwidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">glwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
