@@ -3,9 +3,6 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>
-        3DViewer v1.0
-    </title>
 </head>
 <body>
     <h3>Основная информация о программе</h3>
